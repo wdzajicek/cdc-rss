@@ -1,0 +1,115 @@
+// Styling for the new homepage's news-feed
+// ====================================================
+//
+// YOU WILL NOT FIND THESE CLASSES IN ANY *.HTML FILES
+// The HTML is built by `./buildNewsFeed.js`
+
+.news__ol {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+.news__a {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  line-height: 1;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.news__li {
+  font-size: 17px;
+  font-weight: 400;
+  padding-bottom: 18px;
+  padding-left: 7px;
+  padding-right: 0;
+  padding-top: 18px;
+  border-bottom-color: $black;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  position: relative;
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.news__span {
+  background-color: $primary-blue;
+  border-radius: 13px;
+  box-shadow: 0 0 0 1.4px #000 inset;
+  color: #fff;
+  display: block;
+  float: left;
+  font-family: $font-family-paragraph;
+  font-size: 11px;
+  font-weight: 700;
+  height: 26px;
+  letter-spacing: 0;
+  line-height: 1;
+  margin: -6px 7px 0 -2px;
+  min-width: 26px;
+  padding: 8px 4px 0;
+  text-align: center;
+}
+
+.news__h3 {
+  color: $black;
+  font-family: $font-family-paragraph;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .095em;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.news__p {
+  clear: both;
+}
+
+.news__div--img {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-color: rgba(0,0,0,.125);
+  border-radius: 50%;
+  float: right;
+  height: 50px;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 5px;
+  margin-top: 0;
+  min-height: 50px;
+  min-width: 50px;
+  width: 50px;
+}
+
+@media (min-width: 350px) {
+  .news__div--img {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    min-height: 70px;
+  }
+}
+
+@media (min-width: 450px) {
+  .news__div--img {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    min-height: 80px;
+  }
+}
+
+@media (min-width: 1700px) {
+  .news__div--img {
+    margin-right: 10px;
+  }
+}

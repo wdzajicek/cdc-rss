@@ -1,0 +1,26 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>{% if page.url == '/' %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} | {{ page.title }}{% endif %}</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="{% if jekyll.environment == 'ghPages' %}/cdc-rss/{% else %}{{ site.baseurl }}{% endif %}site.webmanifest">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="icon" type="image/x-icon" href="{% if jekyll.environment == 'ghPages' %}/cdc-rss/{% else %}{{ site.baseurl }}{% endif %}favicon.ico"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% if jekyll.environment == 'ghPages' %}/cdc-rss/{% else %}{{ site.baseurl }}{% endif %}assets/js/dist/main{% if site.data.hash %}.{{ site.data.hash }}{% endif %}.css">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  {{ content }}
+  <!-- Google API -->
+  <!-- <script src="https://apis.google.com/js/api.js" defer></script> -->
+  <script src="{% if jekyll.environment == 'ghPages' %}/cdc-rss/{% else %}{{ site.baseurl }}{% endif %}assets/js/dist/main{% if site.data.hash %}.{{ site.data.hash }}{% endif %}.bundle.js"></script>
+</body>
+</html>

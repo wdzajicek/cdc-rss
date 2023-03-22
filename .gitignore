@@ -1,0 +1,43 @@
+### General Apple things to ignore ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+### Files that might appear in the root of a volume ###
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+### Directories potentially created on remote AFP share ###
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Ignore jekyll _site build folder
+_site
+
+# Don't push these--that would be bad
+.sass-cache
+.jekyll-metadata
+
+# Ignore npm things
+package-lock.json
+node_modules/
+
+# Ignore gem lock to avoid mac/windows discrepencies
+Gemfile.lock
+
+# Jekyll 4's new cache dir
+.jekyll-cache/
+
+# DO NOT PUSH `.ruby-version` FILE TO CLOUDCANNON PROJECTS
+.ruby-version

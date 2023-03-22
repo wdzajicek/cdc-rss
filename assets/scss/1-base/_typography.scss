@@ -1,0 +1,83 @@
+// Typography styles (site specific)
+// ===============================
+
+table {
+  clip-path: inset(0 0 0 0 round 10px);
+}
+
+table * {
+  line-height: 1.2;
+}
+
+tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, .05);
+}
+
+caption,
+thead tr,
+tbody tr:hover {
+  background-color: rgba(0, 0, 0, .125);
+}
+
+td,
+th {
+  color: #555;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  padding: .5rem 1rem;
+}
+
+caption {
+  color: #555;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+th {
+  font-weight: 700;
+}
+
+td {
+  font-weight: 400;
+}
+
+td a {
+  font-weight: 700;
+}
+
+a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: #0a58ca;
+  text-decoration: underline;
+}
+
+@media (prefers-color-scheme: 'dark') {
+  html,
+  body {
+    background-color: #1a1f23;
+  }
+  body * {
+    color: #abb2bf;
+  }
+  tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, .05);
+  }
+
+  thead tr,
+  tbody tr:hover {
+    background-color: rgba(255, 255, 255, .125);
+  }
+  a {
+    color: #6ea8fe;
+  }
+  a:focus,
+  a:hover {
+    color: #9ec5fe;
+  }
+}

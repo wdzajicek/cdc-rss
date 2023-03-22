@@ -1,0 +1,52 @@
+.video__controls {
+  display: block;
+  &--hidden {
+    display: none;
+  }
+}
+
+.video__heading-wrapper--unclickable {
+  pointer-events: none;
+}
+
+// Targets the circular red button element for pausing/playing video
+#playPause {
+  filter: drop-shadow(1.5px 2.5px 2.5px rgba(0,0,0,0.75));
+}
+
+// Targets the pause symbol (two parallel/vertical bars)...
+// ...which is an inline-SVG elements inside the button#playPause
+#pause,
+#play {
+  fill: $primary-red;
+  stroke: $pause-button-stroke-color;
+  height: 22px;
+  width: 22px;
+}
+
+@media screen and (min-width: 400px) {
+  #pause,
+  #play {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+// Remove this rule if the video-heading and video-heading--wrapper
+// are added back into the DOM.
+@media screen and (min-width: 1600px) {
+  #videoContainer {
+    position: relative;
+    bottom: 12vh;
+  }
+}
+
+.video__loader {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-top: 15%;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}

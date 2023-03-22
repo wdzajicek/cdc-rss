@@ -1,0 +1,10 @@
+// Style overrides for frameworks/app-embeds/etc
+// Bootstrap 4 ovderrides
+.alert.alert-warning {
+  margin-top: .5rem;
+}
+
+// Tockify overrides
+iframe[title="calendar"] {
+  border: solid 1px transparent !important;
+}

@@ -1,0 +1,56 @@
+.navbar-light .navbar-nav .nav-link.buttons__btn-primary-custom {
+  background-color: $primary-red;
+  color: $white;
+  &:hover {
+    background-color: $primary-blue;
+  }
+}
+
+.buttons__yt-subscribe {
+  display: inline-block;
+  height: 1rem;
+  margin-top: -4px;
+  margin-right: 5px;
+  transform: scale(1.8,1.8);
+  vertical-align: middle;
+  width: 1rem;
+}
+
+.buttons__custom-danger {
+  margin-right: 20px;
+}
+
+.buttons__btn-margin-top {
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background-color: $btn-primary-bg;
+  border-color: $btn-primary-border;
+}
+
+.btn-primary:hover {
+  background-color: $btn-hover-bg;
+  border-color: $btn-hover-border;
+}
+
+.buttons__play-pause {
+  //background-color: $primary-red;
+  background-color: transparent;
+  //border: none;
+  border-color: $primary-blue;
+  border-color: $primary-red;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 50%;
+  filter: drop-shadow(2px 2px 5px rgba(0,0,0,.25));
+  height: 46px;
+  width: 46px;
+}
+
+@media screen and (min-width: 400px) {
+  .buttons__play-pause {
+    height: 56px;
+    width: 56px;
+  }
+}

@@ -1,0 +1,64 @@
+title: "CDC RSS Feed"
+public-url: "https://www.kcc.edu"
+port: 3000
+theme: "kcc-gem-theme"
+timezone: America/Chicago
+baseurl: '/'
+core_site: true
+core_root: true
+humans_file: true
+collections:
+  contacts:
+    output: false
+permalink: pretty
+description: > # this means to ignore newlines until "baseurl:"
+# Delete this comment and place description on this line
+# include:
+#   - "_pages"
+#   - "_posts"
+
+# include future posts? (true or false)
+future: true
+# Build settings
+markdown: kramdown
+
+exclude:
+  - "gulpfile.js"
+  - "gulp-tasks/"
+  - "node_modules"
+  - "npm-debug.log"
+  - "package.json"
+  - "package-lock.json"
+  - "README.md"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "gulpconfig.yml"
+  - "/docs/"
+  - "yarn.lock"
+  - "/assets/adobe/"
+  - "webpack.config.js"
+  - "install.sh"
+  - "siteicon.png"
+  - "page-startups"
+  - "UPDATE_PROCEDURE.md"
+  - "REDIRECTS.web.config"
+  - "buildtools/"
+  - "postcss.config.js"
+
+uploads_dir: "uploads/" # specifies the default uploads directory for CloudCannon
+
+_comments: # Custom hjelper comments/descriptions for CloudCannon
+  layout: Do NOT modify layouts. It may break things.
+  baseurl: Do NOT modify baseurl. It WILL break all page links.
+  categories: "FOR CATEGORIES <br/>SPORTS-SPECIFIC: <br/>1.) First enter the sport's category from this list <br/>2.) followed by the \"news\" category. <br/>(e.g. mens-basketball news) <br/>GENERAL NEWS: <br/>1.) Enter \"news\" category first <br/>2.) followed by the \"general\" category. <br/>(e.g. news general)"
+  sport_category: Sport for which news item pertains. Gets pulled into news rollup.
+  news_thumb_image: Must be 16:9 ratio image. Preferably 200px wide.
+  description: "Descriptions are seen by search engines like Google and displayed in search results"
+
+_options: # The CloudCannon options key
+  layout: # We don't want users changing these!!
+    hidden: true
+  baseurl: # We don't want users changing these!!
+    hidden: true
+  translate:
+    hidden: true # Prevent CloudCannon Users from randomly turning translate on in their site.
