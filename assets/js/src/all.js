@@ -21,8 +21,10 @@ window.addEventListener('load', () => {
   if (document.getElementById('Data')) {
     loadGapi
       .then((script) => {
+        console.info(`[Script] Loaded: ${script.src}`, script);
+
         import('./getSheetData')
-        .then(({ default: getSheetData }) => getSheetData());
+          .then(({ default: getSheetData }) => getSheetData());
       })
     .catch(err => console.error(err))
   }

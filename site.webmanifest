@@ -1,3 +1,6 @@
+---
+layout: null
+---
 {
   "name": "CDC RSS Feed",
   "short_name": "CDC RSS",
@@ -7,15 +10,15 @@
   "description": "Latest news releases from the CDC",
   "icons": [
     {
-      "src": "/icon_192.png",
+      "src": "{% if jekyll.environment == 'ghPages' %}/cdc-rss/{% else %}{{ site.baseurl }}{% endif %}icon_192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/icon_512.png",
+      "src": "{% if jekyll.environment == 'ghPages' %}/cdc-rss/{% else %}{{ site.baseurl }}{% endif %}icon_512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "start_url": "/"
+  "start_url": "{% if jekyll.environment == 'ghPages' %}/cdc-rss/{% else %}{{ site.baseurl }}{% endif %}"
 }

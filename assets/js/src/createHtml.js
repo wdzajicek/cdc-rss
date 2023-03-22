@@ -7,8 +7,6 @@ const embolden = str => str.replace(
 
 function createHtml(response) {
   const data = response.result.values;
-  
-  console.log(data);
   const tableRows = [...data].map(item => {
     const [title, url, description] = item;
 
