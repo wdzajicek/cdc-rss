@@ -1,6 +1,10 @@
 # Latest news releases from the CDC
 
+**See it live: [https://wdzajicek.github.io/cdc-rss/](https://wdzajicek.github.io/cdc-rss/)**
+
 This project uses the CDC's RSS feed (along with Google Sheet's `=IMPORTFEED()` to bypass CORS issues) to fetch the latest news releases from the CDC website.
+
+-----
 
 ## Prerequisites
 
