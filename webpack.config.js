@@ -24,7 +24,7 @@ module.exports = {
   output: {
     filename: '[name].[fullhash].bundle.js',
     path: path.resolve(__dirname, 'assets', 'js', 'dist'),
-    publicPath: '/assets/js/dist/',
+    publicPath: 'auto',
     clean: true,
   },
   module: {
