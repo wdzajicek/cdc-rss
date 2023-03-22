@@ -1,0 +1,92 @@
+// Overrides AND additions/extensions to Bootstrap 4's styling
+
+.nav-tabs {
+  border-bottom: 1px solid $grey-5;
+}
+
+.nav-tabs .nav-link {
+  background-color: $grey-4;
+  border-left-color: $grey-2;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: $grey-2;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-color: $grey-2;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-bottom-color: $grey-5;
+}
+
+.nav-tabs .nav-link.active {
+  border-color: $grey-5 $grey-5 $white;
+}
+
+.navbar-brand {
+  margin-right: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-brand {
+    margin-right: 1rem;
+  }
+}
+
+.btn {
+  vertical-align: baseline;  // Needed so Google Translate's injected <font> tags don't mess with font's alignment in the page
+}
+
+.modal-open .gsc-search-button {
+  margin-right: 15px;
+}
+
+// Modify the Bootstrap 4 dropdown menu's carot to give it an animated/interactice effect using pure CSS
+// ======================================
+// .dropdown-toggle::after controls the BS4 dropdown-menu carot symbol's display
+@media screen and (max-width: 992px) {
+  .dropdown-toggle::after {  // Set starting position & transition Fx
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-item.dropdown.show .dropdown-toggle::after {  // Selectors that are only present when a dropdown is toggled to the open state.
+    transform: rotate(-180deg);
+  }
+}
+
+.dropdown-toggle.btn::after {  // Set starting position & transition Fx
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-item.dropdown.show .dropdown-toggle.btn::after {  // Selectors that are only present when a dropdown is toggled to the open state.
+  transform: rotate(-180deg);
+}
+
+@media screen and (min-width: 992px) {
+  .dropdown-toggle:not(.btn)::after {  // Set starting position & transition Fx
+    display: none;
+  }
+}
+
+// End BS4 dropdown-menu carot modifications.
+
+// Customizations to alert color-schemes
+// Creates a more visible border around the alerts
+// BS4 default alert border-colors are almost imperceivable
+.alert-warning {
+  border-color: $color-alert-warning-border;
+}
+
+.alert-danger {
+  border-color: $color-alert-danger-border;
+}
+
+.alert-info {
+  border-color: $color-alert-info-border;
+}
+
+.alert-primary {
+  border-color: $color-alert-primary-border;
+}
+

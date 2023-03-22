@@ -1,0 +1,21 @@
+// NOT TO BE CONFUSED WITH `1-base/_header-global.scss` SCSS MODULE
+// STYLES USED IN LANDING PAGE HEADER SECTIONS
+// SPECIFICALLY THE LARGE BACKGROUND IMAGE IN THE DESIGN
+//
+// Header styles for landing pages
+// ==========================================
+
+.header__bg {
+  background-image: url('/assets/img/DSC_8724_4x3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 55%;
+  height: 55vh;
+}
+
+@media screen and (min-width: 1200px) {
+  .header__bg {
+    height: auto;
+  }
+}

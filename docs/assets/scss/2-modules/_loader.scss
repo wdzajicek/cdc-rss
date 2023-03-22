@@ -1,0 +1,25 @@
+// Styling for the little loading GIF
+
+.loader {
+  text-align: center;
+  &__img {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.loader__sync--animate {
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+}

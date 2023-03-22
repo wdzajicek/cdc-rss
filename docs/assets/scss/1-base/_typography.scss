@@ -1,0 +1,644 @@
+// TYPOGRAPHY
+// ===========================
+// Set the base font size for em's to work
+body {
+  font-size: $font-size-base; // Takes control of the base font size from Bootstrap/reboot
+}
+
+// HEADINGS
+// Special Headings (decorative headings used for specific sections)
+
+// h1 is KCC's logo-font, reserved for the nav-local's page-title heading.
+.typography__nav-heading { // Not to be used for page content
+  color: $primary-blue;
+  display: inline;
+  font-family: $font-family-kcc;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition-property: color;
+  transition-timing-function: ease;
+  transition-duration: .4s;
+  &:hover,
+  &:focus {
+    color: $primary-red;
+  }
+  &--smaller {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width:360px) {
+  .typography__nav-heading {
+    font-size: 1.8rem;
+    &--smaller {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and (min-width:410px) {
+  .typography__nav-heading {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .typography__nav-heading {
+    font-size: 2.3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .typography__nav-heading {
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .typography__nav-heading {
+    font-size: 2.6rem;
+  }
+}
+
+.typography__footer-heading { // Footer heading/link that shows the site URL
+  font-family: $font-family-headings;
+  font-size: 1.95rem;
+  font-weight: $font-weight-black;
+}
+
+@media screen and (min-width: 360px) {
+  .typography__footer-heading {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .typography__footer-heading {
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (min-width: 410px) {
+  .typography__footer-heading {
+    font-size: 2.6rem;
+  }
+}
+
+.typography__call-to-action {
+  color: $primary-red;
+  font-family: $font-family-oswald;
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 2.8rem;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.typography__contacts--name {
+  color: $primary-blue;
+  font-family: $font-family-headings;
+  font-size: 1.3em;
+  font-weight: $font-weight-bold;
+  margin-bottom: .2rem;
+}
+
+.typography__contacts--title {
+  color: $color-grey-heading;
+  font-family: $font-family-headings;
+  font-size: 1.1em;
+  font-weight: $font-weight-bold;
+  margin-bottom: .2rem;
+}
+
+.typography__orange-h4  {
+  color: $orange-heading;
+  font-family: $font-family-oswald;
+  font-size: 2.4rem;
+}
+
+.typography__sub-nav--red-h2 {
+  color: $primary-red;
+  font-family: $font-family-oswald;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .typography__sub-nav--red-h2 {
+    font-size: 1.8rem;
+  }
+}
+
+.typography__section--heading {
+  color: $primary-red;
+  font-family: $font-family-oswald;
+  font-size: 2rem;
+  font-weight: $font-weight-boldish;
+}
+
+.typography__header-global--nav-top,
+.typography__header-global--nav-bottom,
+.typography__header-global--nav-local {
+  color: $primary-blue;
+  font-family: $font-family-oswald;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  padding-bottom: .25rem;
+  padding-top: .25rem;
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 992px) {
+  .typography__header-global--nav-top {
+    color: $color-blue-light-nav;
+    font-size: 1.1rem;
+    &:hover,
+    &:focus {
+      color: $color-blue-light-nav;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .typography__header-global--nav-bottom {
+    color: $white;
+    font-size: 1.05rem;
+    font-weight: 400;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .typography__header-global--nav-bottom:hover,
+  .typography__header-global--nav-bottom:focus,
+  .header-global__dropdown:hover .typography__header-global--nav-bottom,
+  .header-global__dropdown:focus .typography__header-global--nav-bottom {
+    color: $primary-blue;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .typography__header-global--nav-local {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .nav-link:not([role=tab]) {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+.typography__nav-link {
+  color: $white;
+  font-family: $font-family-oswald;
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+  text-transform: capitalize;
+}
+
+.typography__nav-local--nav-link {
+  font-family: $font-family-oswald;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.typography__nav-local--color {
+  color: $primary-blue;
+}
+
+// "The POWER of Community" text
+.typography__power-text {
+  color: $white;
+  font-family: $font-family-power;
+  font-size: 1.1rem;
+  font-weight: $font-weight-bold;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 360px) {
+  .typography__power-text {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .typography__power-text {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .typography__power-text {
+    font-size: 2.9rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .typography__power-text {
+    font-size: 3.1rem;
+  }
+}
+
+// Content Headings
+.typography__h2 {
+  color: $color-grey-heading;
+  font-family: $font-family-headings;
+  font-size: 2rem;
+  font-weight: $font-weight-boldish;
+}
+
+.typography__h3 {
+  color: $primary-blue;
+  font-family: $font-family-headings;
+  font-size: 1.75rem;
+  font-weight: $font-weight-bolder;
+}
+
+.typography__h4 {
+  color: $primary-red;
+  font-family: $font-family-headings;
+  font-size: 1.7rem;
+  font-weight: $font-weight-bolder;
+}
+
+.typography__h5 {
+  color: $color-grey-heading;
+  font-family: $font-family-headings;
+  font-weight: $font-weight-bold;
+  font-size: 1.5rem;
+}
+
+.typography__h6 {
+  color: $color-grey-heading;
+  font-family: $font-family-headings;
+  font-weight: $font-weight-bold;
+  font-size: 1.4rem;
+}
+
+.typography__h5--description {
+  color: $grey-6;
+  font-family: $font-family-oswald;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.typography__phone--span {
+  color: $white;
+  font-family: $font-family-oswald;
+  font-size: 1.3rem;
+  font-weight: $font-weight-regular;
+  letter-spacing: .07rem;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 768px) {
+  .typography__phone--span {
+    font-size: 1.45rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .typography__phone--span {
+    font-size: 1.5rem;
+  }
+}
+
+.typography__p--bold {
+  color: $color-grey-heading;
+  font-family: $font-family-headings;
+  font-weight: $font-weight-bold;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.typography__stories--quote {
+  color: $primary-blue;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 488px) {
+  .typography__stories--quote {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .typography__stories--quote {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .typography__stories--quote {
+    font-size: 1.4rem;
+  }
+}
+
+.typography__col--heading-underline {
+  background-image: url(/assets/img/heading-bg-underline.png);
+  background-repeat: no-repeat;
+  background-position: 0 50px;
+}
+
+.typography__col--heading-underline-tan {
+  background-image: url(/assets/img/heading-bg-underline-tan.png);
+  background-repeat: no-repeat;
+  background-position: 0 50px;
+}
+
+// Other font styles
+.typography__p,
+p,
+ul:not(.navbar-nav), // :not() selecter prevents unnecesary style override
+ol { // Needed so list font looks the same as paragraph font
+  color: $color-grey-heading; // Bootstrap sets these things to black
+  font-family: $font-family-paragraph;
+  font-size: $font-size-base;
+}
+
+.typography__tables th {
+  color: $primary-red;
+  font-family: $font-family-headings;
+  font-weight: $font-weight-bold;
+}
+
+.typography__tables td {
+  color: $color-grey-heading; // Bootstrap sets these things to black
+  font-family: $font-family-paragraph;
+  font-size: $font-size-base;
+}
+
+h1 sup, h2 sup, h3 sup, h4 sup, h5 sup, h6 sup { // Make superscripts within headings a little bit smaller than reboot's styling
+  font-size: 45% !important;
+  top: -1em;
+  font-weight: normal;
+}
+.typography__register--h2 {
+  color: $white;
+  font-family: eurostile, sans-serif;
+  font-size: 2.4rem;
+  font-weight: $font-weight-boldish;
+  letter-spacing: .03rem;
+  position: relative;
+  top: 30%;
+  margin-bottom: -10px;
+}
+
+@media screen and (min-width: 400px) {
+  .typography__register--h2 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .typography__register--h2 {
+    font-size: 5.2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .typography__register--h2 {
+    font-size: 6rem;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .typography__register--h2 {
+    font-size: 6.6rem;
+  }
+}
+
+.typography__register--h3 {
+  color: $white;
+  font-family: eurostile, sans-serif;
+  font-size: 1.2rem;
+  font-weight: $font-weight-boldish;
+  letter-spacing: .03rem;
+  position: relative;
+  top: 31%;
+}
+
+@media screen and (min-width: 400px) {
+  .typography__register--h3 {
+    font-size: 1.45rem;
+    top: 30.5%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .typography__register--h3 {
+    font-size: 2.5rem;
+    top: 30%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .typography__register--h3 {
+    font-size: 2.6rem;
+    top: 30%;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .typography__register--h3 {
+    font-size: 2.7rem;
+    top: 30%;
+  }
+}
+
+.typography__register--caption {
+  color: $white;
+  font-family: $font-family-oswald;
+  font-size: 1rem;
+  font-weight: $font-weight-boldish;
+  letter-spacing: .07rem;
+  position: absolute;
+  bottom: 15px;
+}
+
+@media screen and (min-width: 1200px) {
+  .typography__register--caption {
+    font-size: 1.2rem;
+  }
+}
+
+.typography__register-h4 {
+  font-family: $font-family-oswald;
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .typography__register-h4 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .typography__register-h4 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .typography__register-h4 {
+    font-size: 2.3rem;
+  }
+}
+
+.typography__register--h5 {
+  color: $primary-red;
+  font-family: $font-family-oswald;
+  font-size: 2rem;
+  font-weight: $font-weight-bold;
+  letter-spacing: .03rem;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .typography__register--h5 {
+    font-size: 2.8rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .typography__register--h5 {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .typography__register-h5 {
+    font-size: 3rem;
+  }
+}
+
+.typography__register--student-p {
+  color: $black;
+  font-weight: 600;
+  font-size: 1.2em;
+  margin-top: 15px;
+}
+
+.typography__register--img-cap {
+  font-weight: 600;
+  display: block;
+}
+
+.typography__register-itransfer {
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 1;
+  position: absolute;
+  top: 4rem;
+  margin-left: -20px;
+}
+
+@media screen and (min-width: 400px) {
+  .typography__register-itransfer {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .typography__register-itransfer {
+    font-size: 1.9rem;
+  }
+}
+
+.typography__register--h6 {
+  color: $primary-red;
+  font-family: $font-family-saira;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: .03rem;
+}
+
+#page-top::before {
+  display: block;
+  content: " ";
+  margin-top: -60px;
+  height: 60px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.typography__larger-p {
+  font-size: 1.2rem;
+}
+
+.typography__register--thank-you {
+  color: $primary-blue;
+  font-family: $font-family-kcc;
+  font-size: 2rem;
+  &--message {
+    color: $primary-red;
+    font-family: $font-family-saira;
+    font-weight: $font-weight-bold;
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .typography__register--thank-you {
+    font-size: 2.4rem;
+    margin-left: 100px;
+    margin-top: -10px;
+    &--message {
+      font-size: 1.6rem;
+      margin-left: 95px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .typography__register--thank-you {
+    font-size: 2.6rem;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .typography__register--thank-you {
+    font-size: 3rem;
+    margin-top: -15px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .typography__nowrap--sm {
+    white-space: nowrap;
+  }
+}
+
+.typography__color--inherit {
+  color: inherit;
+}
+
+.typography__my-kcc {
+  font-family: $font-family-kcc;
+  line-height: 1.2;
+  font-size: 1.2rem;
+}
+
+.typography__alert {
+  color: inherit;
+}
+
+.typography__last-p--mb0 p.typography__alert:last-child {
+  margin-bottom: 0;
+}
+
+.typography__header-global--nav-bottom:hover {
+  cursor: default;
+}
+
+.dark-mode .typography__header-global--nav-bottom {
+  color: #9bb7dd;
+}

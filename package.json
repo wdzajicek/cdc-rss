@@ -21,6 +21,10 @@
     "defaults"
   ],
   "scripts": {
+    "gh-pages": "run-p jekyll-gh webpack-gh",
+    "copy-gh": "rm -rf ./docs && mkdir ./docs && cp -r ./_site/* ./docs",
+    "jekyll-gh": "JEKYLL_ENV=ghPages bundle exec jekyll build",
+    "webpack-gh": "npx webpack --node-env production",
     "production": "run-p jekyll-production webpack-production",
     "development": "run-p jekyll-development webpack-dev",
     "jekyll-production": "JEKYLL_ENV=production bundle exec jekyll serve --livereload",

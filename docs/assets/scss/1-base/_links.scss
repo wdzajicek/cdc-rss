@@ -1,0 +1,127 @@
+// Rules for styling links
+// =========================================
+@import '../2-modules/link-launch';
+
+.links__kcc-logo {
+  display: inline;
+  float: left;
+  width: 120px;
+  height:80px;
+}
+
+// use the 'link__offset' class to offset jump-links via CSS only method.
+// Links need to be offset to clear the fixed navigation bar at the top.
+// =========================================
+
+.links__offset {  // Pointer-events is needed to prevent the .links__offset::before pseudo-element
+  pointer-events: none;  // from "blocking" any anchor tag above from being clicked.
+  & a,
+  & button,
+  & iframe,
+  & .card-body {  // HOWEVER, if there is a child anchor, or button, element,
+    pointer-events: auto; // it obviously needs to be clickable.
+  }
+}
+
+.links__offset::before {
+  // mobile devices get slightly different offset b/c of different sized fixed header
+  content: " ";
+  display: block;
+  height: 171px; // defining a height pushes the element down the page
+  margin-top: -171px; // negative margin is needed to push it back to its original position
+  pointer-events: none; // w/ out this it will interfere with the sites navigation links
+  visibility: hidden;
+}
+
+@media screen and (min-width: 768px) {
+    .links__offset::before {
+      height: 150px;
+      margin-top: -150px;
+  }
+}
+
+.links__darker-link {
+  color: $darker-link;
+}
+
+// Rules to override bootstrap 4's "nav-link" color
+// =========================================
+.navbar-light .navbar-nav .nav-link.links__nav-link--color:not(.btn-primary) { // Ugly (chain of) selectors needed to overide bootstrap's "nav-link" color:
+  color: $primary-blue;
+  &:hover,
+  &:focus {
+    color: $primary-red;
+  }
+}
+
+.navbar-light .navbar-nav .nav-link.links__nav-link--color.btn-primary {
+  color: $white;
+}
+
+.navbar-light .navbar-nav .active>.nav-link {
+  border-bottom-color: $primary-red;
+  border-bottom-style: solid;
+  border-bottom-width: thick;
+  color: $primary-blue;
+  padding-bottom: 0;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: $primary-red;
+}
+
+.links__phone--span { // Phone # link in the navigation on landing pages like info.kcc.edu
+  color: $white;
+  position: relative; // Needed to make pseudo-element underlining the right width
+  text-decoration: none;
+  &:visited {
+    color: $white;
+  }
+  &:hover,
+  &:focus {
+    color: $white;  // Remove the Bootstrap primary blue colour on a:hover
+    text-decoration: none; // Prevent underlining
+  }
+}
+
+
+.links__phone--span:focus:after,
+.links__phone--span:hover:after { // mouse-hover effect for phone # in landing pages
+  opacity: 1;  // Make the underline fade in
+  transform: translateY(-.2em); // Move the underline up (along the Y-axis) as it fades-in
+}
+
+.links__phone--span:after { // Pseudo-element to unerline the phone # on mouse-hover
+    background-color: $color-orange;
+    bottom: - .325rem;
+    content: "";
+    display: block;
+    height: .1875rem;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .3s,transform .3s; // mouse-hover effect
+    width: 100%;
+}
+
+.links__no-underline {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .links__header-global--nav-local {
+    position: relative;
+  }
+  .active .links__header-global--nav-local::after {
+    background-color: $primary-red;
+    bottom: .125rem;
+    content: '';
+    display: block;
+    height: .145rem;
+    position: absolute;
+    width: calc(100% - 1rem);
+  }
+}

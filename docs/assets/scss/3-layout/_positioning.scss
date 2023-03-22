@@ -1,0 +1,350 @@
+// Positioning Styles
+// ==========================================
+.positioning__margin-bottom {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .positioning__margin-bottom {
+    margin-bottom: 40px;
+  }
+}
+
+.positioning__margin-top {
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .positioning__margin-top {
+    margin-top: 40px;
+  }
+}
+
+.positioning__heading-margin-bottom {
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 1200px) {
+  .positioning__heading-margin-bottom {
+    margin-bottom: 20px;
+  }
+}
+
+.position__offset-fixed-nav {
+  margin-top: 105px;
+}
+
+
+@media screen and (min-width: 360px) {
+  .position__offset-fixed-nav {
+    margin-top: 110px;
+  }
+}
+
+@media screen and (min-width:410px) {
+  .position__offset-fixed-nav {
+    margin-top: 120px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .position__offset-fixed-nav {
+    margin-top: 125px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .position__offset-fixed-nav {
+    margin-top: 130px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .position__offset-fixed-nav {
+    margin-top: 170px;
+  }
+}
+
+.position__sub-nav--offset-fixed-nav {
+  margin-bottom: 15px;
+  margin-top: 130px;
+}
+
+@media screen and (min-width:360px) {
+  .position__sub-nav--offset-fixed-nav {
+    margin-bottom: 20px;
+    margin-top: 135px;
+  }
+}
+
+@media screen and (min-width:410px) {
+  .position__sub-nav--offset-fixed-nav {
+    margin-top: 140px;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .position__sub-nav--offset-fixed-nav {
+    margin-top: 145px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .position__sub-nav--offset-fixed-nav {
+    margin-top: 150px;
+  }
+}
+
+@media screen and (min-width:992px) {
+  .position__sub-nav--offset-fixed-nav {
+    margin-top: 155px;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .position__sub-nav--offset-fixed-nav {
+    margin-top: 160px;
+  }
+}
+
+.positioning__iframe-wrapper {
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.positioning__iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.positioning__offset-global-nav {
+  margin-top: 60px;
+}
+
+.positioning__accordian--padding {
+  margin-top: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+@media screen and (min-width: 992px) {
+  .positioning__accordian--padding {
+    margin-top: 60px;
+  }
+}
+
+.positioning__accordian-marg {
+  margin-top: 75px;
+}
+
+.positioning__card--spacing {
+  margin-bottom: 40px;
+}
+
+.positioning__first-section--marg {
+  margin-top: 15px;
+  background-color: $color-blue-light;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+@media screen and (min-width: 1200px) {
+  .positioning__first-section--marg {
+    margin-top: 15px;
+  }
+}
+
+.positioning__section--marg {
+  margin-top: 35px;
+}
+
+@media screen and (min-width: 1200px) {
+  .positioning__section--marg {
+    margin-top: 65px;
+  }
+}
+
+.positioning__row--pad {
+  margin-top: 25px;
+}
+
+.positioning__register--itransfer-img {
+  width: 120px;
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 400px) {
+  .positioning__register--itransfer-img {
+    width: 140px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .positioning__register--itransfer-img {
+    width: 150px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .positioning__register--itransfer-img {
+    padding-left: 25px;
+  }
+}
+
+.positioning__register--mobile-row--pad {
+  padding-left: 0;
+}
+
+@media screen and (min-width: 576px) {
+  .positioning__register--mobile-row--pad {
+    padding-left: 20%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .positioning__register--mobile-row--pad {
+    padding-left: 0;
+  }
+}
+
+.positioning__register--idfpr-img {
+  width: 330px;
+  margin-top: 60px;
+}
+
+@media screen and (max-width: 992px) {
+  .positioning__register--idfpr-img {
+    margin-bottom: 15px;
+  }
+}
+
+.positioning__register--iccb-img {
+  width: 250px;
+}
+
+@media screen and (max-width: 992px) {
+  .positioning__register--iccb-img {
+    margin-top: 15px;
+  }
+}
+
+.positioning__heading--row {
+  margin-top: 16%;
+}
+
+.positioning__check-svg {
+  margin-top: -60px;
+  width: 80px;
+}
+
+.positioning__blue-section {
+  background-color: $color-blue-light;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+.positioning__col--offset {
+  margin-right: -25px;
+}
+
+@media screen and (min-width: 768px) {
+  .positioning__col--offset {
+    margin-right: -45px;
+  }
+}
+
+.positioning__offset-global-nav {
+  margin-top: 60px;
+}
+
+
+@media screen and (min-width: 768px) {
+  .position__col--min-height {
+    min-height: 15rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .position__col--min-height {
+    min-height: 12rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .position__col--min-height {
+    min-height: 9rem;
+  }
+}
+
+.position__offset-core-nav {
+  margin-top: 99px;
+}
+
+.position__offset-core-nav.position__campus-alerts--open {
+  margin-top: 109px;
+}
+
+@media screen and (min-width: 992px) {
+  .position__offset-core-nav {
+    margin-top: 80px;
+  }
+  .position__offset-core-nav.position__campus-alerts--open {
+    margin-top: 93px;
+  }
+}
+
+.position__offset-alert {
+  margin-top: 0;
+  padding-top: 125px;
+  height: 1px;
+  &--visible {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .position__offset-alert {
+    padding-top: 135px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .position__offset-alert {
+      padding-top: 140px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .position__offset-alert {
+      padding-top: 145px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .position__offset-alert {
+      padding-top: 150px;
+  }
+}
+
+.position__offset-alert.position__offset-alert-core {
+  margin-top: 0;
+  padding-top: 115px;
+}
+
+@media screen and (min-width: 992px) {
+  .position__offset-alert.position__offset-alert-core {
+    padding-top: 110px;
+  }
+}
+
+// Used on the 404 error page
+.positioning__max-width-600 {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}

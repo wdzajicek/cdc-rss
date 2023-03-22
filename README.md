@@ -10,8 +10,16 @@ This project uses the CDC's RSS feed (along with Google Sheet's `=IMPORTFEED()` 
 
 
 ## Installation
-```
-git clone 
+```bash
+git clone git@github.com:wdzajicek/cdc-rss.git
 cd cdc-rss
 npm i && bundle i
+```
+
+## Build
+
+```bash
+npm run production
+npm run development
+npm run gh-pages
 ```
