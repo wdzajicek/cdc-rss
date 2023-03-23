@@ -25,6 +25,10 @@
   }
 }
 
+.text-center {
+  text-align: center;
+}
+
 #Data {
   max-width: 900px;
   margin-left: auto;
@@ -35,6 +39,10 @@
   #Data {
     max-width: 1200px;
   }
+}
+
+.table__wrapper {
+  overflow-x: scroll;
 }
 
 table {

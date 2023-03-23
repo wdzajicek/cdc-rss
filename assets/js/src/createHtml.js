@@ -13,10 +13,10 @@ const createId = str => {
   );
 }
 
-function createHtml(response, captionString, isNewsReleasesBool) {
+function createHtml(response, captionString, isNewsReleases, isFirstRender) {
   const data = response.result.values;
   const tableRows = [...data].map(item => {
-    if (isNewsReleasesBool) {
+    if (isNewsReleases) {
       const [title, url, description] = item;
 
       return (
@@ -38,21 +38,23 @@ function createHtml(response, captionString, isNewsReleasesBool) {
     }
   });
 
-  const html = `<table class="margin--bottom--2">
-  <caption id="${createId(captionString)}">${captionString}</caption>
-  <thead>
-    <tr>
-      <th>Title</th>
-      ${!isNewsReleasesBool ? '<th>Date</th>' : ''}
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    ${tableRows.join('')}
-  </tbody>
-</table>`;
+  const html = `\n<div class="table__wrapper">
+  <table class="margin--bottom--2">
+    <caption id="${createId(captionString)}">${captionString}</caption>
+    <thead>
+      <tr>
+        <th>Title</th>
+        ${ (!isNewsReleases) ? '<th>Date</th>' : ''}
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      ${tableRows.join('')}
+    </tbody>
+  </table>
+</div>`;
   
-  // PARENT.innerHTML = html;
+  if (isFirstRender) PARENT.innerHTML = '';
   PARENT.insertAdjacentHTML('beforeend', html);
 }
 
