@@ -1,8 +1,44 @@
 // Typography styles (site specific)
 // ===============================
 
+.h1,
+.h2 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.h1 {
+  font-size: calc(1.375rem + 1.5vw);
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+.h2 {
+  font-size: calc(1.325rem + .9vw);
+}
+
+@media (min-width: 1200px) {
+  .h1 {
+    font-size: 2.5rem;
+  }
+  .h2 {
+    font-size: 2rem;
+  }
+}
+
+#Data {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 1500px) {
+  #Data {
+    max-width: 1200px;
+  }
+}
+
 table {
-  clip-path: inset(0 0 0 0 round 10px);
+  clip-path: inset(0 0 0 0 round 15px);
 }
 
 table * {
