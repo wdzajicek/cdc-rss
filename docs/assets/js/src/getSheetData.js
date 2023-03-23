@@ -23,15 +23,15 @@ function getSheetData() {
     gapi.client.init(API_PARAMS).then(() => {
       return gapi.client.sheets.spreadsheets.values.get(SHEET_PARAMS_US);
     }).then(response => {
-      createHtml(response, 'Latest US Outbreaks', false);
+      createHtml(response, 'Latest US Outbreaks', false, true);
 
       return gapi.client.sheets.spreadsheets.values.get(SHEET_PARAMS_WORLD);
     }).then(response => {
-      createHtml(response, 'Latest International Outbreaks', false);
+      createHtml(response, 'Latest International Outbreaks', false, false);
 
       return gapi.client.sheets.spreadsheets.values.get(SHEET_PARAMS_NEWS);
     }).then(response => {
-      createHtml(response, 'Latest CDC News Releases', true);
+      createHtml(response, 'Latest CDC News Releases', true, false);
     }, err => {
       console.error("Error trying to fetch the alert from gapi:", err);
     })
