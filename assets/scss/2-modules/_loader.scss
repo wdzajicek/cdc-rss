@@ -27,4 +27,87 @@
   height: 60vh;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.loading__dot1 {
+  animation: visibility 1s ease-in-out infinite;
+}
+
+@keyframes visibility {
+  0% {
+    opacity: 1;
+  }
+
+  65% {
+    opacity: 1;
+  }
+
+  66% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.loading__dot2 {
+  animation: visibility2 1s ease-in-out infinite;
+}
+
+@keyframes visibility2 {
+  0% {
+    opacity: 0;
+  }
+
+  21% {
+    opacity: 0;
+  }
+
+  22% {
+    opacity: 1;
+  }
+
+  65% {
+    opacity: 1;
+  }
+
+  66% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.loading__dot3 {
+  animation: visibility3 1s ease-in-out infinite;
+}
+
+@keyframes visibility3 {
+  0% {
+    opacity: 0;
+  }
+
+  43% {
+    opacity: 0;
+  }
+
+  44% {
+    opacity: 1;
+  }
+
+  65% {
+    opacity: 1;
+  }
+
+  66% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>{% if page.url == '/' %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} | {{ page.title }}{% endif %}</title>
-  <meta name="description" content="">
+  <meta name="description" content="{{ page.description }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="manifest" href="{% if jekyll.environment == 'ghPages' %}/cdc-rss/{% else %}{{ site.baseurl }}{% endif %}site.webmanifest">
