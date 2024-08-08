@@ -1,5 +1,7 @@
 # Latest US & International Outbreaks and News Releases from the CDC
 
+[![Deploy Jekyll site to Pages](https://github.com/wdzajicek/cdc-rss/actions/workflows/deploy.yml/badge.svg)](https://github.com/wdzajicek/cdc-rss/actions/workflows/deploy.yml)
+
 **See it live: [https://wdzajicek.github.io/cdc-rss/](https://wdzajicek.github.io/cdc-rss/)**
 
 This project uses the CDC's RSS feed (along with Google Sheet's `=IMPORTFEED()` to bypass CORS issues) to fetch the latest US outbreaks, international outbreaks, and news releases from the CDC website.
