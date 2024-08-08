@@ -1,1 +1,0 @@
-import '../../scss/translate.scss';

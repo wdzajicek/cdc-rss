@@ -30,11 +30,7 @@ _site
 .jekyll-metadata
 
 # Ignore npm things
-package-lock.json
 node_modules/
-
-# Ignore gem lock to avoid mac/windows discrepencies
-Gemfile.lock
 
 # Jekyll 4's new cache dir
 .jekyll-cache/
