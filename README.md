@@ -10,9 +10,9 @@ This project uses the CDC's RSS feed (along with Google Sheet's `=IMPORTFEED()` 
 
 ## Prerequisites
 
-* [NVM](https://github.com/nvm-sh/nvm), run `nvm use` in project folder, OR
-* [Nodejs](https://nodejs.org) - install the version specified in `.nvmrc`.
-* [`ruby-2.6.3`](https://rvm.io/) and [`jekyll` Gem](https://jekyllrb.com/)
+* [NVM](https://github.com/nvm-sh/nvm), run `nvm use` in project folder, OR:
+  * [Nodejs](https://nodejs.org) - install the version specified in `.nvmrc`.
+* Ruby version specified in `.ruby-version` file.
 
 
 ## Installation
@@ -34,11 +34,6 @@ npm run development
 
 ## GitHub Pages
 
-```bash
-# GitHub pages build using '/cdc-rss/' as baseurl
-npm run gh-pages
-
-# Copy the GitHub pages build from _site/ to docs/ folder
-## GitHub pages gets served from docs/ folder
-npm run copy-gh
-```
+A GitHub action is used to build the site and deploy to GitHub pages.
+Pushing to the `master` branch triggers the action.
+See the actions file: [`.github/workflows/deploy.yml`](https://github.com/wdzajicek/cdc-rss/blob/master/.github/workflows/deploy.yml)
