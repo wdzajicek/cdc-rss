@@ -1,41 +1,53 @@
 import createHtml from "./createHtml";
 
-const SPREADSHEET_ID = '1_fc2lDA-UBFxINhj1QaOZ07ZlLlufzg4lrOCoVKXwEI';
-const API_PARAMS = { // This is configuration for API call with spreadsheets that are setup as readonly
-  'apiKey': 'AIzaSyAUAfvITHm6rfXD5hYwsGA-AYjc2onrm1g',
-  'discoveryDocs': ['https://www.googleapis.com/discovery/v1/apis/sheets/v4/rest']
-};
-const SHEET_PARAMS_NEWS = {
-  spreadsheetId: SPREADSHEET_ID,
+const apiKey = 'AIzaSyAUAfvITHm6rfXD5hYwsGA-AYjc2onrm1g';
+const spreadsheetId = '1_fc2lDA-UBFxINhj1QaOZ07ZlLlufzg4lrOCoVKXwEI';
+
+const sheetParamsNews = {
+  spreadsheetId: spreadsheetId,
   range: 'RSS Import'
 };
-const SHEET_PARAMS_US = {
-  spreadsheetId: SPREADSHEET_ID,
+const sheetParamsUs = {
+  spreadsheetId: spreadsheetId,
   range: 'US Outbreaks'
 };
-const SHEET_PARAMS_WORLD = {
-  spreadsheetId: SPREADSHEET_ID,
+const sheetParamsIntr = {
+  spreadsheetId: spreadsheetId,
   range: 'International Outbreaks'
 };
 
-function getSheetData() {
-  gapi.load('client', () => {
-    gapi.client.init(API_PARAMS).then(() => {
-      return gapi.client.sheets.spreadsheets.values.get(SHEET_PARAMS_US);
-    }).then(response => {
-      createHtml(response, 'Latest US Outbreaks', false, true);
+async function fetchSheetData(spreadsheetId, range, apiKey) {
+  // Use encodeURIComponent to handle spaces and '!' in the range string
+  const encodedRange = encodeURIComponent(range);
+  const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${encodedRange}?key=${apiKey}`;
 
-      return gapi.client.sheets.spreadsheets.values.get(SHEET_PARAMS_WORLD);
-    }).then(response => {
-      createHtml(response, 'Latest International Outbreaks', false, false);
+  try {
+    const response = await fetch(url);
+    
+    if (!response.ok) {
+      const error = await response.json();
+      throw new Error(`Google Sheets API Error: ${error.error.message}`);
+    }
 
-      return gapi.client.sheets.spreadsheets.values.get(SHEET_PARAMS_NEWS);
-    }).then(response => {
-      createHtml(response, 'Latest CDC News Releases', true, false);
-    }, err => {
-      console.error("Error trying to fetch the alert from gapi:", err);
-    })
-  });
+    const data = await response.json();
+    
+    // Google returns an empty object if the range is empty; 
+    // we default to an empty array for consistency.
+    return data.values || [];
+  } catch (err) {
+    console.error("Failed to fetch sheet data:", err);
+    throw err;
+  }
+}
+
+async function getSheetData() {
+  const usData = await fetchSheetData(sheetParamsUs.spreadsheetId, sheetParamsUs.range, apiKey);
+  const intrData = await fetchSheetData(sheetParamsIntr.spreadsheetId, sheetParamsIntr.range, apiKey);
+  const newsData = await fetchSheetData(sheetParamsNews.spreadsheetId, sheetParamsNews.range, apiKey);
+
+  createHtml(usData, 'Latest US Outbreaks', false, true);
+  createHtml(intrData, 'Latest International Outbreaks', false, false);
+  createHtml(newsData, 'Latest CDC News Releases', true, false);
 }
 
 export default getSheetData;

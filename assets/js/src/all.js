@@ -2,30 +2,19 @@
  *
  *  Custom JS written by Wesley Zajicek
  * @author Wesley Zajicek - <https://github.com/wdzajicek>
- *
+ * 
+ * NOTE: confetti.js code modified from <https://codepen.io/coopergoeke/pen/wvaYMbJ>
  *
  */
 import '../../scss/main.scss';
 
-let loadGapi = new Promise((res, rej) => {
-  const script = document.createElement('script');
-
-  script.setAttribute('defer', '');
-  script.src = 'https://apis.google.com/js/api.js';
-  script.onload = () => res(script);
-  script.onerror = e => rej(new Error(e));
-  document.head.append(script);
-});
-
 window.addEventListener('load', () => {
   if (document.getElementById('Data')) {
-    loadGapi
-      .then((script) => {
-        console.info(`[Script] Loaded: ${script.src}`, script);
+    import('./getSheetData')
+      .then(({ default: getSheetData }) => getSheetData());
+  }
 
-        import('./getSheetData')
-          .then(({ default: getSheetData }) => getSheetData());
-      })
-    .catch(err => console.error(err))
+  if (document.getElementById('button')) {
+    import('./confetti').then(({default: confetti}) => confetti());
   }
 });

@@ -1,4 +1,4 @@
-const PARENT = document.getElementById('Data');
+const parentElement = document.getElementById('Data');
 
 const embolden = str => str.replace(
   /\*([^\*]+)\*/g,
@@ -14,7 +14,7 @@ const createId = str => {
 }
 
 function createHtml(response, captionString, isNewsReleases, isFirstRender) {
-  const data = response.result.values;
+  const data = response;
   const tableRows = [...data].map(item => {
     if (isNewsReleases) {
       const [title, url, description] = item;
@@ -54,8 +54,8 @@ function createHtml(response, captionString, isNewsReleases, isFirstRender) {
   </table>
 </div>`;
   
-  if (isFirstRender) PARENT.innerHTML = '';
-  PARENT.insertAdjacentHTML('beforeend', html);
+  if (isFirstRender) parentElement.innerHTML = '';
+  parentElement.insertAdjacentHTML('beforeend', html);
 }
 
 export default createHtml;

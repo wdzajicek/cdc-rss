@@ -1,6 +1,6 @@
 Jekyll::Hooks.register :pages, :pre_render do |page|
   
-  if File.exists?(page.path)
+  if File.exist?(page.path)
 
     # get the page's last modified time
     modification_time = File.mtime( page.path )
@@ -13,7 +13,7 @@ end
 
 Jekyll::Hooks.register :posts, :pre_render do |post|
   
-  if File.exists?(post.path)
+  if File.exist?(post.path)
 
     # get the post's last modified time
     modification_time = File.mtime( post.path )

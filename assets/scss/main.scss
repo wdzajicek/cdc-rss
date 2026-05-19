@@ -1,17 +1,18 @@
-// Variables
-@import '0-tools/vars';
+// Tools
+
 
 // Base items
-@import '1-base/typography';
+@use '1-base/typography';
 
 // Modular components
-@import '2-modules/loader';
-@import '2-modules/nav';
+@use '2-modules/loader';
+@use '2-modules/nav';
+@use '2-modules/confetti';
 
 // Layout items
-// @import "3-layout/...";
-@import '3-layout/margin';
+// @use "3-layout/...";
+@use '3-layout/margin';
 
 // Page specific styling
-// @import "4-pages/...";
-//@import '4-pages/index/home';
+// @use "4-pages/...";
+//@use '4-pages/index/home';
